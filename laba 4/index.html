@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Eventually by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 9999;
+      }
+      .modal-content {
+        background: #fff;
+        color: #000;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease;
+      }
+      .modal-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .modal-open .modal-content {
+        transform: translateY(0);
+      }
+      .hidden {
+        display: none;
+      }
+      .close-button {
+        border: none;
+        background: transparent;
+        font-size: 1.4rem;
+        float: right;
+        cursor: pointer;
+      }
+      #header.scrolled {
+        background: rgba(0, 0, 0, 0.75);
+        padding: 1rem;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+      <h1>Eventually</h1>
+      <p>
+        A simple template for telling the world when you'll launch<br />
+        your next big thing. Brought to you by
+        <a href="http://html5up.net">HTML5 UP</a>.
+      </p>
+    </header>
+
+    <!-- Button to open modal -->
+    <button id="open-modal" class="button" style="margin-bottom: 2rem;">
+      Відкрити модальне вікно
+    </button>
+
+    <!-- Modal Window -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-modal" class="close-button">✕</button>
+        <h2>Модальне вікно</h2>
+        <p>Це модалка, яку керує TypeScript 😎</p>
+      </div>
+    </div>
+
+    <!-- Fetch Section -->
+    <section id="posts" style="margin-top: 3rem;">
+      <h2>Пости з JSONPlaceholder</h2>
+      <button id="load-posts" class="button" style="margin: 1rem 0;">
+        Завантажити пости
+      </button>
+      <ul id="posts-list"></ul>
+    </section>
+
+    <!-- Signup Form -->
+    <form id="signup-form" method="post" action="#">
+      <input type="email" name="email" id="email" placeholder="Email Address" />
+      <input type="submit" value="Sign Up" />
+    </form>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Untitled.</li>
+        <li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./dist/main.js" defer></script>
+  </body>
+</html>
